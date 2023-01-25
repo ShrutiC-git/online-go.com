@@ -6,6 +6,7 @@
 
 This repository contains the source code for web client used by [Online-Go.com](https://online-go.com).
 
+
 # Contributing
 Feel like making some changes? Excellent! See the [Contributing guide](./CONTRIBUTING.md).
 
