@@ -17,7 +17,7 @@ services:
     entrypoint: /bin/sh
     command: 
       - "-c"
-      - "OGS_BACKEND=production yarn dev"
+      - "OGS_BACKEND=PRODUCTION yarn dev"
     deploy:
           resources:
             limits:
