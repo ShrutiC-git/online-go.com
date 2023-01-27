@@ -2,8 +2,8 @@ version: "3"
 
 x-uffizzi:
   ingress:
-    service: nginx
-    port: 8081
+    service: online-go
+    port: 8082
 
 services:
 
