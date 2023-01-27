@@ -7,10 +7,10 @@ x-uffizzi:
 
 services:
 
-  nginx:
-    image: nginx:alpine
-    volumes:
-      - ./nginx:/etc/nginx
+  # nginx:
+  #   image: nginx:alpine
+  #   volumes:
+  #     - ./nginx:/etc/nginx
   
   online-go:
     image: "${ONLINE_GO_IMAGE}"
