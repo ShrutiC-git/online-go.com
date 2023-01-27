@@ -165,7 +165,7 @@ function background_webpack(done) {
 //  ... the developer points their browser at this server and magic happens...
 
 function dev_server(done) {
-    const port = 8080;   // this is the port on localhost where the developer points their browser to, to get the backend that this proxies
+    const port = 8082;   // this is the port on localhost where the developer points their browser to, to get the backend that this proxies
 
     let server_url, use_https;
 
@@ -179,7 +179,7 @@ function dev_server(done) {
             use_https = true;
             break;
         case 'LOCAL':
-            server_url = 'http://localhost:1080';
+            server_url = 'http://localhost:8080';
             use_https = false;
             break;
         case 'UFFIZZI':
