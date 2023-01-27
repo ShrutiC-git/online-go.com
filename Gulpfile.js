@@ -183,7 +183,7 @@ function dev_server(done) {
             use_https = false;
             break;
         case 'UFFIZZI':
-            server_url = process.env.SERVER_URL;
+            server_url = 'https://pr-8-deployment-12496-online-go-com.app.uffizzi.com/server';
             use_https = true;  
             break;      
         default:
@@ -201,7 +201,7 @@ function dev_server(done) {
     devserver.use(body_parser.text())
 
     http.createServer(devserver)
-        .listen(port, process.env.UFFIZZI_URL, function() {
+        .listen(port, 'https://pr-8-deployment-12496-online-go-com.app.uffizzi.com/', function() {
             console.info(`#############################################`);
             console.info(`## Development server started on port ${port}`);
             console.info(`##  ( http://localhost:${port} )`             );
