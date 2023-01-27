@@ -17,7 +17,7 @@ services:
     entrypoint: /bin/sh
     command: 
       - "-c"
-      - "UFFIZZI_URL=$$UFFIZZI_URL && SERVER_URL=$$UFFIZZI_URL/server npm run dev"
+      - "export UFFIZZI_URL=$$UFFIZZI_URL && export SERVER_URL=$$UFFIZZI_URL/server && npm run dev"
     deploy:
           resources:
             limits:
