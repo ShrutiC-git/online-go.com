@@ -19,7 +19,7 @@ services:
       - "-c"
       - "UFFIZZI_URL=$$UFFIZZI_URL npm run dev:uffizzi"
     ports:
-      - "8081:8081"
+      - "8082:8082"
     deploy:
           resources:
             limits:
