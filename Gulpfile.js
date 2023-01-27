@@ -1,10 +1,9 @@
 'use strict';
 
 // Which backend server would you like to use today? ...
-//let BACKEND = process.env.OGS_BACKEND || 'BETA';
-//let BACKEND = 'PRODUCTION';
-//let BACKEND = 'LOCAL';
-let BACKEND = 'UFFIZZI';
+let BACKEND = process.env.OGS_BACKEND || 'BETA';
+//BACKEND = 'PRODUCTION';
+//BACKEND = 'LOCAL';
 
 const spawn        = require('child_process').spawn;
 const fs           = require('fs');
@@ -53,6 +52,7 @@ gulp.task('default',
         "watch_eslint"
     )
 );
+
 
 function reload(done) {
     livereload.reload();
@@ -165,7 +165,7 @@ function background_webpack(done) {
 //  ... the developer points their browser at this server and magic happens...
 
 function dev_server(done) {
-    const port = 8082;   // this is the port on localhost where the developer points their browser to, to get the backend that this proxies
+    const port = 8080;   // this is the port on localhost where the developer points their browser to, to get the backend that this proxies
 
     let server_url, use_https;
 
@@ -179,13 +179,9 @@ function dev_server(done) {
             use_https = true;
             break;
         case 'LOCAL':
-            server_url = 'http://localhost:8080';
+            server_url = 'http://localhost:1080';
             use_https = false;
             break;
-        case 'UFFIZZI':
-            server_url = 'https://pr-8-deployment-12496-online-go-com.app.uffizzi.com/server';
-            use_https = true;  
-            break;      
         default:
             console.error(`unsupported backend: ${BACKEND}`);
             process.exit(1);
@@ -201,7 +197,7 @@ function dev_server(done) {
     devserver.use(body_parser.text())
 
     http.createServer(devserver)
-        .listen(port, '127.0.0.1', function() {
+        .listen(port, null, function() {
             console.info(`#############################################`);
             console.info(`## Development server started on port ${port}`);
             console.info(`##  ( http://localhost:${port} )`             );
