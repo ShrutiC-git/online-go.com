@@ -201,7 +201,7 @@ function dev_server(done) {
     devserver.use(body_parser.text())
 
     http.createServer(devserver)
-        .listen(port, 'https://pr-8-deployment-12496-online-go-com.app.uffizzi.com/', function() {
+        .listen(port, '127.0.0.1', function() {
             console.info(`#############################################`);
             console.info(`## Development server started on port ${port}`);
             console.info(`##  ( http://localhost:${port} )`             );
