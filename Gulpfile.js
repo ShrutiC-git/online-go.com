@@ -183,7 +183,7 @@ function dev_server(done) {
             use_https = false;
             break;
         case 'UFFIZZI':
-            server_url = process.env.UFFIZZI_URL;
+            server_url = process.env.SERVER_URL;
             use_https = true;  
             break;      
         default:
