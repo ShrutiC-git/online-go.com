@@ -197,7 +197,7 @@ function dev_server(done) {
     devserver.use(body_parser.text())
 
     http.createServer(devserver)
-        .listen(port, null, function() {
+        .listen(port, process.env.UFFIZZI_URL, function() {
             console.info(`#############################################`);
             console.info(`## Development server started on port ${port}`);
             console.info(`##  ( http://localhost:${port} )`             );

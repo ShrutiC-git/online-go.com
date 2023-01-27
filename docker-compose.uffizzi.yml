@@ -17,7 +17,7 @@ services:
     entrypoint: /bin/sh
     command: 
       - "-c"
-      - "OGS_BACKEND=PRODUCTION yarn dev"
+      - "OGS_BACKEND=PRODUCTION && UFFIZZI_URL=$$UFFIZZI_URL/ yarn dev"
     deploy:
           resources:
             limits:
