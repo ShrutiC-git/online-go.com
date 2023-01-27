@@ -3,7 +3,7 @@ version: "3"
 x-uffizzi:
   ingress:
     service: online-go
-    port: 8080
+    port: 8081
 
 services:
 
@@ -19,7 +19,7 @@ services:
       - "-c"
       - "UFFIZZI_URL=$$UFFIZZI_URL npm run dev:uffizzi"
     ports:
-      - "8080:8080"
+      - "8081:8081"
     deploy:
           resources:
             limits:
