@@ -4,7 +4,7 @@
 //let BACKEND = process.env.OGS_BACKEND || 'BETA';
 //let BACKEND = 'PRODUCTION';
 //let BACKEND = 'LOCAL';
-let BACKEND = 'LOCAL';
+let BACKEND = 'UFFIZZI';
 
 const spawn        = require('child_process').spawn;
 const fs           = require('fs');
@@ -184,7 +184,7 @@ function dev_server(done) {
             break;
         case 'UFFIZZI':
             server_url = process.env.UFFIZZI_URL;
-            use_https = false;  
+            use_https = true;  
             break;      
         default:
             console.error(`unsupported backend: ${BACKEND}`);
