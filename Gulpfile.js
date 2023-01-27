@@ -4,7 +4,7 @@
 //let BACKEND = process.env.OGS_BACKEND || 'BETA';
 //let BACKEND = 'PRODUCTION';
 //let BACKEND = 'LOCAL';
-let BACKEND = 'UFFIZZI';
+let BACKEND = 'LOCAL';
 
 const spawn        = require('child_process').spawn;
 const fs           = require('fs');
@@ -165,7 +165,7 @@ function background_webpack(done) {
 //  ... the developer points their browser at this server and magic happens...
 
 function dev_server(done) {
-    const port = 8081;   // this is the port on localhost where the developer points their browser to, to get the backend that this proxies
+    const port = 8082;   // this is the port on localhost where the developer points their browser to, to get the backend that this proxies
 
     let server_url, use_https;
 
